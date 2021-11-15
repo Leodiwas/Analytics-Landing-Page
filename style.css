@@ -481,11 +481,18 @@ body
 
   /* .header */
   .header {
-    height: 112vh;
+    height: 100vh;
   }
   .bg-logo-large,
   .bg-logo-small {
     display: none;
+  }
+
+  /* .hero */
+  .hero h1 {
+    font-size: 4.4rem;
+    line-height: 5rem;
+    max-width: unset;
   }
 
   /* nav */
