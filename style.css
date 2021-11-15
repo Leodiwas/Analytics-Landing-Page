@@ -242,7 +242,7 @@ h2 {
   right: 40rem;
 }
 
-/* Features styling */
+/* ===================Features styling================ */
 .features {
   padding-block: 6rem;
 }
@@ -483,6 +483,11 @@ body
   .header {
     height: 112vh;
   }
+  .bg-logo-large,
+  .bg-logo-small {
+    display: none;
+  }
+
   /* nav */
   .navbar {
     padding-top: 2rem;
