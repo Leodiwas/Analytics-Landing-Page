@@ -261,7 +261,7 @@ h2 {
   align-items: center;
   text-align: center;
 }
-.features-card img {
+.features-card svg {
   margin-bottom: 3rem;
 }
 .features_card-title {
@@ -297,6 +297,15 @@ body
 .reports-mid {
   padding-block: 4rem;
 }
+.reports-img-box {
+  transition: all 0.5s ease;
+}
+.reports-img-box:hover {
+  transform: scale(1.1) perspective(80rem) rotateY(-10deg);
+}
+.reports-img-box-mid:hover {
+  transform: scale(1.1) perspective(80rem) rotateY(10deg);
+}
 
 /* ==============Plans Styling============= */
 .plans {
@@ -316,20 +325,34 @@ body
   max-width: 68ch;
   margin: auto;
 }
-
 .plans-card {
   background: var(--color-card);
   padding: 5rem 6rem 7rem 6rem;
   box-shadow: 0 1.8rem 5rem -1.5rem rgba(25, 42, 89, 0.2);
   border-radius: 3rem;
   text-align: center;
-  margin: 0 4rem;
+  margin: 0 5rem;
+  transition: all 0.8s ease;
+}
+.plans-card:hover {
+  background: var(--color-white-fade);
+  color: var(--color-text-main);
+  transform: scale(1.05);
+}
+.plans-card:hover .card-title,
+.plans-card:hover .dollar_num,
+.plans-card:hover .card_dollar {
+  color: var(--color-text-main);
   transition: all 0.5s ease;
 }
-/* .plans-card:hover {
-  background: var(--color-white);
-  color: var(--color-text-main);
-} */
+.plans-card:hover .card-line {
+  background: var(--color-text-sec);
+}
+.plans-card:hover .btn-secondary {
+  background: var(--color-red);
+  border: 0.1rem solid var(--color-red);
+  color: var(--color-white);
+}
 .card-title {
   margin-bottom: 1rem;
 }
@@ -381,6 +404,158 @@ body
 .footer-social-links ul {
   display: flex;
   gap: 4rem;
+}
+
+/* ===============Animation============== */
+
+/* =============Clock============= */
+.clock-stick {
+  animation: stick-large 2s linear infinite;
+  transition: all 0.5s ease;
+  transform-origin: center;
+  fill: #172755;
+}
+@keyframes stick-large {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.clock-stick-small {
+  animation: stick-small 12s linear infinite;
+  transition: all 0.5s ease;
+  transform-origin: center;
+  fill: #172755;
+}
+@keyframes stick-small {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.arrow-1 {
+  animation: arrow-1 2s linear infinite;
+  transition: all 0.5s ease;
+  transform-origin: center;
+}
+@keyframes arrow-1 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.arrow-2 {
+  animation: arrow-2 2s linear infinite;
+  transition: all 0.5s ease;
+  transform-origin: center;
+}
+@keyframes arrow-2 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.arrow-3 {
+  animation: arrow-3 2s linear infinite;
+  transition: all 0.5s ease;
+  transform-origin: center;
+}
+@keyframes arrow-3 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.arrow-4 {
+  animation: arrow-4 2s linear infinite;
+  transition: all 0.5s ease;
+  transform-origin: center;
+}
+@keyframes arrow-4 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* ===========Computer========= */
+
+.com-arrow-box,
+.com-arrow-box-top,
+.com-arrow-box-small {
+  fill: #172755;
+}
+.com-arrow {
+  animation: com-arr 2s ease infinite;
+  transition: all 0.5s ease;
+  fill: #172755;
+  position: relative;
+  z-index: 2;
+}
+@keyframes com-arr {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  40% {
+    transform: translateY(1rem) translateX(1rem);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+/* ================Rocket=========== */
+.rocket {
+  animation: rocket 2s ease infinite;
+  transition: all 0.5s ease;
+}
+@keyframes rocket {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-0.6rem) translateY(0.6rem);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+.rocket-burner {
+  animation: burner 2s ease infinite;
+  transition: all 0.5s ease;
+  transform-origin: center;
+  fill: #172755;
+}
+@keyframes burner {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-0.1rem) translateY(0.1rem);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+.burner-right,
+.burner-left {
+  fill: #172755;
 }
 
 /* =================Media Queries============= */
@@ -538,8 +713,12 @@ body
   }
 
   /* .reports */
+  .reports {
+    padding: 0;
+  }
   .reports-info {
     text-align: center;
+    margin-bottom: 2rem;
   }
 
   /* .plans */
