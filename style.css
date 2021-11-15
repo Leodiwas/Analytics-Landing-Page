@@ -489,10 +489,16 @@ body
   }
 
   /* .hero */
+  .hero {
+    padding-block: 2rem;
+  }
   .hero h1 {
     font-size: 4.4rem;
     line-height: 5rem;
     max-width: unset;
+  }
+  .hero .para {
+    margin-bottom: 4rem;
   }
 
   /* nav */
