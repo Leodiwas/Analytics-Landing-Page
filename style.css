@@ -333,6 +333,7 @@ body
   text-align: center;
   margin: 0 5rem;
   transition: all 0.8s ease;
+  cursor: pointer;
 }
 .plans-card:hover {
   background: var(--color-white-fade);
